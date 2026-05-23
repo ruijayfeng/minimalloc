@@ -1,0 +1,44 @@
+﻿# VS2022 user files
+*.user
+*.rsuser
+*.suo
+*.vcxproj.user
+.vs/
+
+# Build outputs
+Debug/
+Release/
+x64/
+x86/
+Win32/
+ARM/
+ARM64/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.obj
+*.iobj
+*.ipdb
+*.pch
+*.res
+*.idb
+*.log
+*.tlog
+*.lastbuildstate
+*.metagen
+*.manifest
+*.recipe
+
+# CMake
+out/
+build/
+CMakeSettings.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Local agent config
+.claude/
