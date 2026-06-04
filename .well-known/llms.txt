@@ -1,0 +1,24 @@
+# minimalloc
+
+> A learning-oriented C++ concurrent memory pool inspired by Google's tcmalloc. Implements the classic ThreadCache → CentralCache → PageCache three-tier architecture with ~1,500 lines of code.
+
+## Project details
+
+- License: MIT
+- Language: C++11+
+- Platform: Windows (MSVC)
+- Source: https://github.com/ruijayfeng/minimalloc
+
+## Source Code
+
+- [README.md](/README.md) — Overview, architecture diagram, size-class tiers, quick start
+- [Common.h](/Common.h) — Core types: FreeList, SizeClass (5-tier alignment), Span, SpanList
+- [ThreadCache.cpp](/ThreadCache.cpp) — Per-thread fast-path allocation (TLS)
+- [CentralCache.cpp](/CentralCache.cpp) — Bulk transfer between ThreadCache and PageCache
+- [PageCache.cpp](/PageCache.cpp) — Span management, page allocation via VirtualAlloc
+- [PageMap.h](/PageMap.h) — TCMalloc-style radix tree (1/2/3-level) for page ID mapping
+
+## Tests & Benchmarks
+
+- [UnitTest.cpp](/UnitTest.cpp) — Allocation and deallocation tests
+- [BenchMark.cpp](/BenchMark.cpp) — Performance comparison vs new/malloc
